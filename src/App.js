@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import './App.css';
 import searchIcon from './search.svg';
 import MovieCard from "./MovieCard";
+import './helpers';
 
 
 const API_URL = 'http://www.omdbapi.com?apikey=9d041017';
@@ -26,23 +27,26 @@ const App = () => {
             <h1>Movie Search</h1>
 
             <div className='search'>
-                <input
-                    placeholder='Search for movies'
-                    value={searchTerm}
-                    onChange={(e) => setSearch(e.target.value)}
-                />
-                <img src={searchIcon}
-                    alt='search'
-                    onClick={() => searchMovies(searchTerm)}
-                />
+                <form className="input-form">
+                    <input
+                        placeholder='Search for movies'
+                        value={searchTerm}
+                        onChange={(e) => setSearch(e.target.value)}
+                    // onKeyDown={onKeyDownHandler}
+                    />
+                    <img src={searchIcon}
+                        alt='search'
+                        onClick={() => searchMovies(searchTerm)}
+                    />
+                </form>
             </div>
 
             {
                 movies?.length > 0
                     ? (
                         <div className='container'>
-                            {movies.map((movie) => 
-                            <MovieCard movie={movie} />
+                            {movies.map((movie) =>
+                                <MovieCard movie={movie} />
                             )}
                         </div>
                     ) : (
