@@ -1,4 +1,4 @@
-import { useState, useEffect, useId } from "react";
+import { useState, useEffect } from "react";
 import './App.css';
 import searchIcon from './search.svg';
 import MovieCard from "./MovieCard";
@@ -7,10 +7,9 @@ import MovieCard from "./MovieCard";
 const API_URL = 'https://www.omdbapi.com?apikey=9d041017';
 
 const App = () => {
-    const [movies, setMovies] = useState([]);
+    let emptyList = ["batman"];
+    const [movies, setMovies] = useState(emptyList);
     const [searchTerm, setSearch] = useState('');
-
-    const id = useId();
 
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
@@ -46,8 +45,8 @@ const App = () => {
                 movies?.length > 0
                     ? (
                         <div className='container'>
-                            {movies.map((movie) =>
-                                <MovieCard key={id} movie={movie} />
+                            {movies.map((movie, index) =>
+                                <MovieCard key={index.toString()} movie={movie} />
                             )}
                         </div>
                     ) : (
