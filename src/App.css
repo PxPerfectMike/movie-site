@@ -74,7 +74,7 @@ h1 {
 
 .search input::placeholder {
     color: var(--MQpeach);
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     font-family: var(--font-raleway);
     font-weight: 900;
 }
@@ -214,7 +214,7 @@ h1 {
     }
 
     .search input {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         padding: 0;
         margin-left: 0.2rem;
     }
@@ -233,7 +233,7 @@ h1 {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     .container {
@@ -241,7 +241,7 @@ h1 {
     }
 
     .movie {
-        width: "100%";
+        width: 100%;
         margin: 1rem;
     }
 }
