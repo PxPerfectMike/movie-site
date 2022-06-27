@@ -25,14 +25,13 @@ body {
 
 .app {
     padding: 4rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-h1 {
+.page-title {
     font-size: 3rem;
     letter-spacing: 0.9px;
     background: linear-gradient(90deg,
@@ -43,16 +42,15 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
+    margin-bottom: 20px;
 }
 
 .search {
     width: 71%;
     margin: 2rem 0 2rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     padding: 1.5rem 1.75rem;
     border-radius: 3rem;
     background: var(--MQlightGreen);
@@ -86,25 +84,9 @@ h1 {
     z-index: 5;
 }
 
-/* .search button {
-  padding: 20px 40px;
-  border-radius: 0.5rem;
-  margin-left: 15px;
-  color: #a1a1a1;
-  font-family: var(--font-raleway);
-  font-weight: 900;
-  letter-spacing: 0.75px;
-  font-size: 1.25rem;
-  cursor: pointer;
-  background: #1f2123;
-  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
-} */
-
 .empty {
     width: 100%;
     margin-top: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,7 +101,6 @@ h1 {
 .container {
     width: 100%;
     margin-top: 3rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,12 +111,10 @@ h1 {
     width: 310px;
     height: 460px;
     margin: 1.5rem;
-
     position: relative;
     border-radius: 12px;
     overflow: hidden;
     border: none;
-
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
@@ -168,7 +147,6 @@ h1 {
     z-index: 2;
     background-color: #343739;
     padding: 16px 24px 24px 24px;
-
     position: absolute;
     bottom: 0;
     right: 0;
@@ -203,7 +181,7 @@ h1 {
     opacity: 1;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .app {
         padding: 4rem 2rem;
     }
@@ -221,9 +199,21 @@ h1 {
 
     .search img {
         position: absolute;
-        margin-left: 36vw;
+        margin-left: 34vw;
         width: 40px;
         height: 40px;
+    }
+}
+
+@media screen and (min-height: 1180px) {
+    .search img {
+        margin-left: 40vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .search input::placeholder {
+        font-size: 3.5rem;
     }
 }
 
@@ -232,7 +222,7 @@ h1 {
         padding: 4rem 1rem;
     }
 
-    h1 {
+    .page-title {
         font-size: 3.5rem;
     }
 
@@ -243,5 +233,25 @@ h1 {
     .movie {
         width: 100%;
         margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .search input {
+        font-size: 1.1rem;
+    }
+
+    .search input::placeholder {
+        font-size: 1.1rem;
+    }
+
+    .search img {
+        width: 30px;
+        height: 30px;
+        padding-right: 2px;
     }
 }

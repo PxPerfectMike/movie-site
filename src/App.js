@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <div className='app'>
-            <h1>Movie Quip</h1>
+            <h1 className="page-title">Movie Quip</h1>
 
             <form className='search' onSubmit={(e) => searchMovies(searchTerm) && e.preventDefault()}>
 
