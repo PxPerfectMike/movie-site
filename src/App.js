@@ -7,7 +7,7 @@ import MovieCard from "./MovieCard";
 const API_URL = 'https://www.omdbapi.com?apikey=9d041017';
 
 const App = () => {
-    let emptyList = ["batman"];
+    let emptyList = ["imdb"];
     const [movies, setMovies] = useState(emptyList);
     const [searchTerm, setSearch] = useState('');
 
@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <div className='app'>
-            <h1>Movie Search</h1>
+            <h1>Movie Quip</h1>
 
             <form className='search' onSubmit={(e) => searchMovies(searchTerm) && e.preventDefault()}>
 
