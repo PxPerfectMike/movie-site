@@ -15,6 +15,7 @@
     --MQpeach: #f9d3b4;
     --MQlightGreen: #388d5d;
     --MQgreen: #067034;
+    --MQblack: #0e1111;
 }
 
 body {
@@ -36,7 +37,7 @@ h1 {
     letter-spacing: 0.9px;
     background: linear-gradient(90deg,
             var(--MQyellow) 0%,
-           var(--MQpeach),
+            var(--MQpeach),
             var(--MQyellow) 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -54,27 +55,35 @@ h1 {
 
     padding: 1.5rem 1.75rem;
     border-radius: 3rem;
-    background: #388d5d;
-    -webkit-box-shadow: 0px 0px 40px #067034;
-    box-shadow:  0px 0px 40px #067034;
+    background: var(--MQlightGreen);
+    -webkit-box-shadow: 0px 0px 40px var(--MQgreen);
+    box-shadow: 0px 0px 40px var(--MQgreen);
 }
 
 .search input {
     flex: 1;
     border: none;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-family: var(--font-raleway);
-    font-weight: 500;
+    font-weight: 900;
     padding-right: 0.3rem;
     outline: none;
-    color: #a1a1a1;
-    background: #1f2123;
+    color: var(--MQblack);
+    background: transparent;
+}
+
+.search input::placeholder {
+    color: var(--MQpeach);
+    font-size: 3.5rem;
+    font-family: var(--font-raleway);
+    font-weight: 900;
 }
 
 .search img {
     width: 35px;
     height: 35px;
     cursor: pointer;
+    z-index: 5;
 }
 
 /* .search button {
@@ -205,13 +214,16 @@ h1 {
     }
 
     .search input {
-        font-size: 1rem;
+        font-size: 1.7rem;
+        padding: 0;
+        margin-left: 0.2rem;
     }
 
     .search img {
-        
-        width: 20px;
-        height: 20px;
+        position: absolute;
+        margin-left: 36vw;
+        width: 40px;
+        height: 40px;
     }
 }
 
