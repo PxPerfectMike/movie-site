@@ -7,7 +7,7 @@ import randomWords from 'random-words';
 const API_URL = 'https://www.omdbapi.com?apikey=9d041017';
 
 const App = () => {
-    let emptyList = ["imdb"];
+    let emptyList = [randomWords()];
     const [movies, setMovies] = useState(emptyList);
     const [searchTerm, setSearch] = useState('');
 
@@ -47,12 +47,16 @@ const App = () => {
                     ? (
                         <div className='container'>
                             {movies.map((movie, index) =>
-                                <MovieCard key={index.toString()} movie={movie} />
+                                <MovieCard
+                                    key={index.toString()}
+                                    movie={movie}
+                                    id={movie.imdbID}
+                                />
                             )}
                         </div>
                     ) : (
                         <div className="empty">
-                            <h2>No movies found</h2>
+                            <h2 id="empty-search">You haven't entered anything into the search. Please enter a title and search again.</h2>
                         </div>
                     )
             }
@@ -62,5 +66,3 @@ const App = () => {
 }
 
 export default App;
-
-// push comment
