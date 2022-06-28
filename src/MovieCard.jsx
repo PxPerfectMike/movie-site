@@ -12,7 +12,7 @@ const MovieCard = ({ movie }) => {
 
             <div>
                 <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://svgshare.com/i/icY.svg'}
-                alt={setAltText(movie.Title)} />
+                    alt={setAltText(movie.Title)} />
             </div>
 
             <div>
