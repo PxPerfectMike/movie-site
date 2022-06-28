@@ -23,7 +23,7 @@
 
 body {
     font-family: var(--font-roboto);
-    background-color: var(--MQred);
+    background-color: var(--MQblack);
 }
 
 .app {
@@ -56,9 +56,9 @@ body {
     justify-content: center;
     padding: 1.5rem 1.75rem;
     border-radius: 3rem;
-    background: var(--MQlightGreen);
-    -webkit-box-shadow: 0px 0px 40px var(--MQgreen);
-    box-shadow: 0px 0px 40px var(--MQgreen);
+    background: var(--MQpink);
+    -webkit-box-shadow: 0px 0px 40px var(--MQember);
+    box-shadow: 0px 0px 40px var(--MQember);
 }
 
 .search input {
