@@ -3,7 +3,6 @@ import { setAltText } from "../helpers";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-import '../App.css';
 
 
 const MovieCard = ({ movie }) => {
@@ -16,10 +15,12 @@ const MovieCard = ({ movie }) => {
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection='vertical'>
             <div className='movie' id="front" onClick={handleClick}>
-                    <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://svgshare.com/i/icY.svg'}
-                        alt={setAltText(movie.Title)} />
-                    <span>{movie.Type}</span>
+                <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://svgshare.com/i/icY.svg'}
+                    alt={setAltText(movie.Title)} />
+                <div className='movie-info'>
+                    <span id={'titleBar'}>{movie.Type}</span>
                     <h3>{movie.Title}</h3>
+                </div>
             </div>
 
             <div className='movie' id="back" onClick={handleClick}>
