@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import './App.css';
 import searchIcon from './search.svg';
-import MovieCard from "./MovieCard";
+import MovieCard from './components/MovieCard';
 import randomWords from 'random-words';
 
 const API_URL = 'https://www.omdbapi.com?apikey=9d041017';
