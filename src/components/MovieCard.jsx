@@ -24,7 +24,11 @@ const MovieCard = ({ movie }) => {
             </div>
 
             <div className='movie' id="back" onClick={handleClick}>
-                <p>Back</p>
+                <h2 className="backTitle">Back</h2>
+                <div className='quip-list'>
+                    <h3>Quips</h3>
+
+                </div>
             </div>
         </ReactCardFlip>
     );

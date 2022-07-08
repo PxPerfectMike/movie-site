@@ -19,6 +19,7 @@
     --MQpink: #813772;
     --MQember: #B82601;
     --MQwhite: #E7DFDD;
+    --MQmargin-bottom: 20px;
 }
 
 body {
@@ -113,10 +114,10 @@ body {
 .movie {
     width: 310px;
     height: 460px;
-    margin: 10px;
     overflow: hidden;
     border-radius: 12px;
     object-fit: cover;
+    margin-bottom: var(--MQmargin-bottom);
 }
 
 .movie .react-card-front div:nth-of-type(1) {
@@ -133,7 +134,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 94%;
+    width: 100%;
     object-fit: fill;
     position: absolute;
     margin: auto;
@@ -141,27 +142,27 @@ body {
     border: 3px solid yellow;
 }
 
-.react-card-back div:nth-of-type(1) {
-    height: 460px;
-    width: 310px;
-    background-color: #f0f0f0;
+.react-card-back  {
+    height: 460px !important;
+    width: 310px !important;
+    background-color: var(--MQpink);
+    color: var(--MQwhite);
+    border-radius: 12px;
+    border: 3px solid yellow;
+    margin-bottom: var(--MQmargin-bottom);
 }
 
 .movie .movie-info {
-    z-index: 2;
     background-image: linear-gradient(90deg,
             var(--MQred) 0%,
             var(--MQpink) 100%);
     padding: 14px 24px 24px 20px;
-    grid-area: movie-info;
-    margin-bottom: 150px;
-    position: relative;
     border-top: 3px solid yellow;
     border-left: 3px solid yellow;
     border-right: 3px solid yellow;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .movie span {
@@ -181,6 +182,10 @@ body {
     font-family: "Roboto Slab", serif;
     color: #e5ff00;
     opacity: 1;
+}
+
+.quip-list h3 {
+    border: none;
 }
 
 
