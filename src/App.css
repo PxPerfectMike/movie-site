@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition-timing-function: ease-out;
+    text-size-adjust: inherit;
+    animation-timing-function: ease-out;
 }
 
 :root {
@@ -140,6 +143,7 @@ body {
     margin: auto;
     border-radius: 13px;
     border: 3px solid yellow;
+    
 }
 
 .react-card-back  {
@@ -188,6 +192,9 @@ body {
     border: none;
 }
 
+.react-card-flipper {
+    perspective: 1000px !important;
+}
 
 @media screen and (max-width: 1200px) {
     .app {
@@ -205,7 +212,7 @@ body {
         margin-left: 0.2rem;
     }
 
-    .search img {
+    .search svg {
         position: absolute;
         margin-left: 34vw;
         width: 40px;
@@ -214,7 +221,7 @@ body {
 }
 
 @media screen and (min-height: 1180px) {
-    .search img {
+    .search svg {
         margin-left: 40vw;
     }
 }
